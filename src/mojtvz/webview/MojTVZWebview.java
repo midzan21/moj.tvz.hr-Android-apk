@@ -1,7 +1,7 @@
 /**
  * moj.tvz.hr Android aplikacija
  * 
- * @author Marko Id�an
+ * @author Marko Idžan
  * @version 1.0 beta1
  * 
  */
@@ -20,17 +20,21 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toast;
 
-
+/*
+* Main Java class which loads WebView inside application
+*/
 public class MojTVZWebview extends Activity {
-
+/*
+* Mijenja blank activity sa WebView activitijem
+*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.webview);
-        final WebView pregled = (WebView)findViewById(R.id.webview);
-        pregled.getSettings().setJavaScriptEnabled(true);
+        setContentView(R.layout.webview); //Učitaanje WebView layouta
+        final WebView pregled = (WebView)findViewById(R.id.webview); // zadajemo varijablu pregled da vrši metodu WebView koju sam deklarirao u liniji iznad
+        pregled.getSettings().setJavaScriptEnabled(true); // omogućuje učitavanje JavaScripta unutar WebViewa (potrebno je da bi se Bootstrap dobro izvrsavao)
         
-        pregled.setWebViewClient(new WebViewClient());
+        pregled.setWebViewClient(new WebViewClient()); //svi linkovi se otvaraju unutar WebViewa a ne browseru
         
         
         /*String varanjeKoda = "<html lang=\"en\">"
@@ -46,7 +50,7 @@ public class MojTVZWebview extends Activity {
 
           
         
-        pregled.loadUrl("https://moj.tvz.hr/prikaz/mojvijes");
+        pregled.loadUrl("https://moj.tvz.hr/prikaz/mojvijes"); //nakon logina se učitavaju vijesti a ne glupavi dobrodošli ekran
         
         
         //pregled.loadData(varanjeKoda, "text/html", null);
@@ -113,6 +117,7 @@ public class MojTVZWebview extends Activity {
         //}
         //return super.onOptionsItemSelected(item);
     	
+    	// Dodaje O aplikaciji u meni izborniku sa toastom o verziji aplikacije
     	switch (item.getItemId()) {
         // action with ID action_refresh was selected
         case R.id.action_settings:
