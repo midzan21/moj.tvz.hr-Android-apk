@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<lint>
-    <issue id="SetJavaScriptEnabled">
-        <ignore path="src/mojtvz/webview/MojTVZWebview.java" />
-    </issue>
-</lint>
