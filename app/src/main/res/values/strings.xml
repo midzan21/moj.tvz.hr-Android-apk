@@ -6,5 +6,21 @@
     <string name="action_settings">Settings</string>
     <string name="drawer_open">otvori</string>
     <string name="drawer_close">zatvori</string>
+    
+    <string-array name="imenaLinkova">
+        <item>Moje vijesti</item>
+        <item>Moji predmeti</item>
+        <item>Obavijesti studentima</item>
+        <item>Obavijesti studentske referade</item>
+        <item>Odjava</item>
+    </string-array>
+
+    <string-array name="linkovi">
+        <item>https://moj.tvz.hr/prikaz/mojvijes</item>
+        <item>https://moj.tvz.hr/prikaz/mojpred</item>
+        <item>https://moj.tvz.hr/prikaz/studobav</item>
+        <item>https://moj.tvz.hr/prikaz/nast</item>
+        <item>https://moj.tvz.hr/odjava</item>
+    </string-array>
 
 </resources>
