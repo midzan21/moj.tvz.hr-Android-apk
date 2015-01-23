@@ -1,13 +1,45 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".GlavnoSucelje">
 
+    <include layout="@layout/toolbar" />
 
-    <WebView
-        android:id="@+id/activity_prikaz_weba"
+    <android.support.v4.widget.DrawerLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:id="@+id/drawerLayout">
 
-</RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff">
+
+            <WebView
+                android:id="@+id/activity_prikaz_weba"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+         </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="left|start"
+            android:background="#fff">
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/left_drawer"
+                android:divider="#eee"
+                android:background="#fff"
+                android:dividerHeight="1dp" />
+
+            </RelativeLayout>
+
+    </android.support.v4.widget.DrawerLayout>
+
+</LinearLayout>

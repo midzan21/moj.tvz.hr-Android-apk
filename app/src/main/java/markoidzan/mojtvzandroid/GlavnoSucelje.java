@@ -1,29 +1,41 @@
 package markoidzan.mojtvzandroid;
 
-import android.os.AsyncTask;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-
-import java.io.IOException;
 
 import static markoidzan.mojtvzandroid.R.id.activity_prikaz_weba;
 
 
 public class GlavnoSucelje extends ActionBarActivity {
 
+    private Toolbar toolbar;
+    private DrawerLayout drawerLayout;
+    private ActionBarDrawerToggle drawerToggle;
+    private ListView listaDrawer;
+    private ArrayAdapter<String> navDrawerAdapter;
+    private String[] sliderData = {"Moje vijesti","Moji predmeti", "Obavijesti studentima", "Obavijesti studentske referade", "Odjava"};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_prikaz_weba);
+        nitView();
+        if(toolbar != null) {
+            toolbar.setTitle("Moj TVZ za Android");
+            setSupportActionBar(toolbar);
+        }
 
         final WebView webStranica;
 
@@ -56,7 +68,32 @@ public class GlavnoSucelje extends ActionBarActivity {
         });
 
         webStranica.loadUrl("https://moj.tvz.hr/prikaz/mojvijes");
+        initDrawer();
 
+    }
+
+    private void nitView() {
+        listaDrawer = (ListView) findViewById(R.id.left_drawer);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
+        navDrawerAdapter = new ArrayAdapter<String>(GlavnoSucelje.this, android.R.layout.simple_list_item_1, sliderData);
+
+    }
+
+    private void initDrawer() {
+        drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.drawer_open, R.string.drawer_close) {
+            @Override
+        public void onDrawerClosed(View drawerView) {
+                super.onDrawerClosed(drawerView);
+            }
+
+            @Override
+        public void onDrawerOpened (View drawerView) {
+                super.onDrawerClosed(drawerView);
+            }
+
+        };
+        drawerLayout.setDrawerListener(drawerToggle);
     }
 
     @Override
@@ -75,6 +112,9 @@ public class GlavnoSucelje extends ActionBarActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            return true;
+        }
+        if (drawerToggle.onOptionsItemSelected(item)) {
             return true;
         }
 
