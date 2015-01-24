@@ -12,33 +12,39 @@
         android:layout_height="match_parent"
         android:id="@+id/drawerLayout">
 
-        <RelativeLayout
+
+
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#fff">
+            android:background="#fff"
+            android:id="@+id/content_frame">
 
             <WebView
                 android:id="@+id/activity_prikaz_weba"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
-         </RelativeLayout>
+         </FrameLayout>
+
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_gravity="left|start"
-            android:background="#fff">
+            android:layout_gravity="start"
+            android:background="#fff"
+            android:id="@+id/left_drawer">
 
             <ListView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/left_drawer"
+
                 android:divider="#eee"
                 android:background="#fff"
-                android:dividerHeight="1dp" />
-
+                android:dividerHeight="1dp"
+                android:id="@+id/left_drawer_child"/>
             </RelativeLayout>
+
 
     </android.support.v4.widget.DrawerLayout>
 
