@@ -3,18 +3,29 @@ moj.tvz.hr-Android-apk
 
 Android aplikacija za Intranet portal Tehničkog veleučilišta u Zagrebu. 
 
+# Download link
+
+https://www.androidfilehost.com/?fid=95916177934516660
+
 ## Changelog
 
-###v2
+###v2.0
 
 * Uklonjen defaulni web checkerboard background
 * Uklonjen logo i sve grafike sa weba
 * Uklonjen footer sa weba
-* Uklonjena ugrađena navigacija (priprema za slide-in meni i navigaciju webom)
+* Uklonjena ugrađena navigacija 
+* Ugrađen Navigation Drawer sa odabirom slijedećih linkova na webu:
+    * Moje vijesti (default nakon logina)
+    * Moji predmeti
+    * Obavijesti studentima
+    * Obavijesti studentske referade
+    * Raspored sati (korisno)
+    * Odjava (za iOS korisnike da vide što ih zanima ;) :trollface: )
 
 ## Ideje za aplikaciju:
 
-* Material Design smejrnice i primjena istih
+* Material Design smejrnice i primjena istih (djelomična primjena sa 2.0 stable)
 * Poboljšavanje login prozora i pristupa kolegijima/predmetima (djelomično riješeno)
 * Poboljšavanje responsive dijela weba(djelomično riješeno)
 * Sitne prepravke sučelja Intranet weba (riješeno)
