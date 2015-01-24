@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="markoidzan.mojtvzandroid" >
+    package="markoidzan.mojtvzandroid"
+    android:versionCode="2"
+    android:versionName="2.0">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -18,8 +20,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MojeVijesti"></activity>
-        <activity android:name=".MojiPredmeti"></activity>
+        <activity android:name=".MojeVijesti" />
+        <activity android:name=".MojiPredmeti" />
+        <activity android:name=".ObavijestiStudentima" />
+        <activity android:name=".ObavijestiStudReferade" />
+        <activity android:name=".RasporedSati" />
+        <activity android:name=".Odjava" />
+
     </application>
 
 </manifest>

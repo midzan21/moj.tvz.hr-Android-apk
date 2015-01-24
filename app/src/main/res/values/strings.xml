@@ -12,6 +12,7 @@
         <item>Moji predmeti</item>
         <item>Obavijesti studentima</item>
         <item>Obavijesti studentske referade</item>
+        <item>Raspored sati</item>
         <item>Odjava</item>
     </string-array>
     <string-array name="linkovi">
@@ -19,10 +20,10 @@
         <item>https://moj.tvz.hr/prikaz/mojpred</item>
         <item>https://moj.tvz.hr/prikaz/studobav</item>
         <item>https://moj.tvz.hr/prikaz/nast</item>
+        <item>https://moj.tvz.hr/prikaz/raspored</item>
         <item>https://moj.tvz.hr/odjava</item>
     </string-array>
 
-    <string name="title_activity_moji_predmeti">MojiPredmeti</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 
 </resources>

@@ -1,7 +1,7 @@
 package markoidzan.mojtvzandroid;
 
-import android.os.Bundle;
 import android.app.Fragment;
+import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.view.KeyEvent;
@@ -12,11 +12,10 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-
 /**
- * Created by Marko on 23.1.2015..
+ * Created by Marko on 24.1.2015..
  */
-public class MojeVijesti extends Fragment {
+public class RasporedSati extends Fragment {
 
     WebView webStranica;
 
@@ -32,7 +31,7 @@ public class MojeVijesti extends Fragment {
     };
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.mojevijesti, container, false);
+        View rootView = inflater.inflate(R.layout.rasporedsati, container, false);
 
 
 
@@ -85,7 +84,7 @@ public class MojeVijesti extends Fragment {
 
 
 
-        webStranica.loadUrl("https://moj.tvz.hr/prikaz/mojvijes");
+        webStranica.loadUrl("https://moj.tvz.hr/prikaz/raspored");
 
 
         return rootView;

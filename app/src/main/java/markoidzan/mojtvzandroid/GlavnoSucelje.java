@@ -32,9 +32,11 @@ public class GlavnoSucelje extends ActionBarActivity {
     private CharSequence mTitle;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_prikaz_weba);
+
+
 
         relativeDrawer = (RelativeLayout) findViewById(R.id.left_drawer);
         listaDrawer = (ListView) findViewById(R.id.left_drawer_child);
@@ -119,6 +121,12 @@ public class GlavnoSucelje extends ActionBarActivity {
                     selectItem(position);
                 case 2:
                     selectItem(position);
+                case 3:
+                    selectItem(position);
+                case 4:
+                    selectItem(position);
+                case 5:
+                    selectItem(position);
             }
         }
     }
@@ -144,11 +152,38 @@ public class GlavnoSucelje extends ActionBarActivity {
                 drawerLayout.closeDrawer(relativeDrawer);
                 return;
             case 2:
-                Fragment fragment2 = new MojeVijesti();
+                Fragment fragment2 = new ObavijestiStudentima();
                 Bundle argumenti2 = new Bundle();
                 fragment2.setArguments(argumenti2);
                 FragmentManager fragmentManager2 = getFragmentManager();
                 fragmentManager2.beginTransaction().replace(R.id.activity_prikaz_weba, fragment2).commit();
+                listaDrawer.setItemChecked(position, true);
+                drawerLayout.closeDrawer(relativeDrawer);
+                return;
+            case 3:
+                Fragment fragment3 = new ObavijestiStudReferade();
+                Bundle argumenti3 = new Bundle();
+                fragment3.setArguments(argumenti3);
+                FragmentManager fragmentManager3 = getFragmentManager();
+                fragmentManager3.beginTransaction().replace(R.id.activity_prikaz_weba, fragment3).commit();
+                listaDrawer.setItemChecked(position, true);
+                drawerLayout.closeDrawer(relativeDrawer);
+                return;
+            case 4:
+                Fragment fragment4 = new RasporedSati();
+                Bundle argumenti4 = new Bundle();
+                fragment4.setArguments(argumenti4);
+                FragmentManager fragmentManager4 = getFragmentManager();
+                fragmentManager4.beginTransaction().replace(R.id.activity_prikaz_weba, fragment4).commit();
+                listaDrawer.setItemChecked(position, true);
+                drawerLayout.closeDrawer(relativeDrawer);
+                return;
+            case 5:
+                Fragment fragment5 = new Odjava();
+                Bundle argumenti5 = new Bundle();
+                fragment5.setArguments(argumenti5);
+                FragmentManager fragmentManager5 = getFragmentManager();
+                fragmentManager5.beginTransaction().replace(R.id.activity_prikaz_weba, fragment5).commit();
                 listaDrawer.setItemChecked(position, true);
                 drawerLayout.closeDrawer(relativeDrawer);
                 return;
