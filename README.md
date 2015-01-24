@@ -39,10 +39,10 @@ https://www.androidfilehost.com/?fid=95916177934516660
 * jQuery &amp; JavaScript
 
 
-## Minimalni zahtjevi (na dan 21. 10. 2014.)
+## Minimalni zahtjevi (na dan 25. 01. 2015.)
 
 * Android 4.0 i noviji (podržan je i Android 5.0.2 Lollipop, testirano na emulatoru)
 * MDPI rezolucija ekrana (320 x 480 px)
 
 
-Copyright &copy; 2014 by Marko Idžan
+Copyright &copy; 2014-2015 by Marko Idžan
