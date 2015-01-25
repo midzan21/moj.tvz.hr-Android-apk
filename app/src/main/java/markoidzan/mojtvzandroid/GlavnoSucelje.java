@@ -54,7 +54,6 @@ public class GlavnoSucelje extends ActionBarActivity {
 
         if (toolbar != null) {
             toolbar.setTitle("Moj TVZ za Android");
-            selectItem(0);
             setSupportActionBar(toolbar);
         }
 
@@ -79,6 +78,8 @@ public class GlavnoSucelje extends ActionBarActivity {
         }
 
     }
+
+
 
 
     @Override

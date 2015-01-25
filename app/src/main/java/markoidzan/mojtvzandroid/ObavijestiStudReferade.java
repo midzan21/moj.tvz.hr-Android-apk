@@ -17,24 +17,10 @@ import android.webkit.WebViewClient;
  */
 public class ObavijestiStudReferade extends Fragment {
 
-    WebView webStranica;
-
-    final Handler handler = new Handler() {
-        @Override
-        public void handleMessage(Message message) {
-            switch (message.what) {
-                case 1: {
-                    webViewGoBack();
-                } break;
-            }
-        }
-    };
-
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.obavijestistudreferade, container, false);
 
-
-
+        final WebView webStranica;
 
 
         webStranica = (WebView) rootView.findViewById(R.id.stranica);
@@ -70,28 +56,30 @@ public class ObavijestiStudReferade extends Fragment {
 
 
         });
-        webStranica.setOnKeyListener(new View.OnKeyListener() {
+
+        webStranica.loadUrl("https://moj.tvz.hr/prikaz/nast");
+
+        webStranica.setOnKeyListener( new View.OnKeyListener() {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
-                if((keyCode == KeyEvent.KEYCODE_BACK) && webStranica.canGoBack()) {
-                    handler.sendEmptyMessage(1);
+                if (event.getAction() == KeyEvent.ACTION_DOWN) {
+                    WebView webView = (WebView) v;
+
+                    switch (keyCode) {
+                        case KeyEvent.KEYCODE_BACK:
+                            if(webView.canGoBack()) {
+                                webView.goBack();
+                                return true;
+                            }
+                    }
                 }
                 return false;
             }
         });
 
 
-
-
-
-        webStranica.loadUrl("https://moj.tvz.hr/prikaz/nast");
-
-
         return rootView;
 
-    }
-    void webViewGoBack(){
-        webStranica.goBack();
     }
 
 }

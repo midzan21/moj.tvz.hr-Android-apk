@@ -18,23 +18,13 @@ import android.webkit.WebViewClient;
  */
 public class MojeVijesti extends Fragment {
 
-    WebView webStranica;
-
-    final Handler handler = new Handler() {
-        @Override
-        public void handleMessage(Message message) {
-            switch (message.what) {
-                case 1: {
-                    webViewGoBack();
-                } break;
-            }
-        }
-    };
-
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.mojevijesti, container, false);
 
 
+
+        final WebView webStranica;
 
 
 
@@ -71,28 +61,31 @@ public class MojeVijesti extends Fragment {
 
 
         });
-        webStranica.setOnKeyListener(new View.OnKeyListener() {
+
+        webStranica.loadUrl("https://moj.tvz.hr/prikaz/mojvijes");
+
+
+        webStranica.setOnKeyListener( new View.OnKeyListener() {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
-                if((keyCode == KeyEvent.KEYCODE_BACK) && webStranica.canGoBack()) {
-                    handler.sendEmptyMessage(1);
+                if (event.getAction() == KeyEvent.ACTION_DOWN) {
+                    WebView webView = (WebView) v;
+
+                    switch (keyCode) {
+                        case KeyEvent.KEYCODE_BACK:
+                            if(webView.canGoBack()) {
+                                webView.goBack();
+                                return true;
+                            }
+                    }
                 }
                 return false;
             }
         });
 
-
-
-
-
-        webStranica.loadUrl("https://moj.tvz.hr/prikaz/mojvijes");
-
-
         return rootView;
 
     }
-    void webViewGoBack(){
-        webStranica.goBack();
-    }
+
 
 }
