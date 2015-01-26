@@ -5,9 +5,15 @@ Android aplikacija za Intranet portal Tehničkog veleučilišta u Zagrebu.
 
 # Download link
 
-https://www.androidfilehost.com/?fid=95916177934516660
+https://www.androidfilehost.com/?fid=95916177934517825
 
 ## Changelog
+
+###v2.1
+
+* Back tipka radi ono što bi i trebala, vraća na prethodnu stranicu a ne izlazi odmah iz aplikacije :cheer:
+* Sitne optimizacije koda
+* Download link je gore
 
 ###v2.0
 
@@ -26,17 +32,14 @@ https://www.androidfilehost.com/?fid=95916177934516660
 ## Ideje za aplikaciju:
 
 * Material Design smejrnice i primjena istih (djelomična primjena sa 2.0 stable)
-* Poboljšavanje login prozora i pristupa kolegijima/predmetima (djelomično riješeno)
+* Poboljšavanje login prozora i pristupa kolegijima/predmetima (riješeno)
 * Poboljšavanje responsive dijela weba(djelomično riješeno)
 * Sitne prepravke sučelja Intranet weba (riješeno)
-* Ad Free od početka (ako bude bilo zadovoljnih korisnika ili faks bude tražio da se zarađuje na tome ubacujem reklame)
 
-## Planirane tehnologije za izradu aplikacije
+## Tehnologije korištene za izradu aplikacije
 
 * Java
-* HTML5
-* CSS3
-* jQuery &amp; JavaScript
+* JavaScript (za XSS uređenje weba kad neće učitavati extrenal CSS file)
 
 
 ## Minimalni zahtjevi (na dan 25. 01. 2015.)
