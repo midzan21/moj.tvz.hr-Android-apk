@@ -1,4 +1,4 @@
-moj.tvz.hr-Android-apk
+Moj TVZ za Android
 ======================
 
 Android aplikacija za Intranet portal Tehničkog veleučilišta u Zagrebu. 
