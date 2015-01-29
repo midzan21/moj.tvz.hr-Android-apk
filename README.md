@@ -5,7 +5,7 @@ Android aplikacija za Intranet portal Tehničkog veleučilišta u Zagrebu.
 
 # Download link
 
-https://www.androidfilehost.com/?fid=95916177934518542
+https://www.androidfilehost.com/?fid=95916177934519823
 
 ## Changelog
 
