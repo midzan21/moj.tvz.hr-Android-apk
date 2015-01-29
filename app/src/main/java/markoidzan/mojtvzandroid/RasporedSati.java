@@ -2,20 +2,20 @@ package markoidzan.mojtvzandroid;
 
 import android.app.Fragment;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.ProgressBar;
 
-/**
- * Created by Marko on 24.1.2015..
- */
+
 public class RasporedSati extends Fragment {
+
+    private ProgressBar progressBar;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.rasporedsati, container, false);
@@ -23,6 +23,8 @@ public class RasporedSati extends Fragment {
         final WebView webStranica;
 
         webStranica = (WebView) rootView.findViewById(R.id.stranica);
+
+        progressBar = (ProgressBar) rootView.findViewById(R.id.progressbar);
 
         WebSettings javascriptUkljucen = webStranica.getSettings();
 
@@ -56,9 +58,22 @@ public class RasporedSati extends Fragment {
 
         });
 
+        webStranica.setWebChromeClient(new WebChromeClient() {
+            @Override
+            public void onProgressChanged(WebView view, int progress) {
+                if (progress < 100 && progressBar.getVisibility() == ProgressBar.GONE)
+                    progressBar.setVisibility(ProgressBar.VISIBLE);
+                progressBar.setProgress(progress);
+                if (progress == 100)
+                    progressBar.setVisibility(ProgressBar.GONE);
+
+            }
+
+        });
+
         webStranica.loadUrl("https://moj.tvz.hr/prikaz/raspored");
 
-        webStranica.setOnKeyListener( new View.OnKeyListener() {
+        webStranica.setOnKeyListener(new View.OnKeyListener() {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
                 if (event.getAction() == KeyEvent.ACTION_DOWN) {
@@ -66,7 +81,7 @@ public class RasporedSati extends Fragment {
 
                     switch (keyCode) {
                         case KeyEvent.KEYCODE_BACK:
-                            if(webView.canGoBack()) {
+                            if (webView.canGoBack()) {
                                 webView.goBack();
                                 return true;
                             }

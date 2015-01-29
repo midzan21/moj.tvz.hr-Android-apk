@@ -3,7 +3,12 @@
 
     <string name="app_name">Moj TVZ za Android</string>
     <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_about">O aplikaciji</string>
+    <string name="action_about_dialog">O aplikaciji</string>
+    <string name="text_about_dialog">Verzija 2.2\n
+    Autor: Marko Idžan\n
+    </string>
+    <string name="text_action_close_about_dialog">Zatvori</string>
     <string name="drawer_open">otvori</string>
     <string name="drawer_close">zatvori</string>
 

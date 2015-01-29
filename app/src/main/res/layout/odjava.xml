@@ -1,13 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:id="@+id/Odjava"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/ObavijestiStudentima">
+    android:orientation="vertical">
 
     <WebView
         android:id="@+id/stranica"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
 
     <ProgressBar
         android:id="@+id/progressbar"
@@ -16,7 +17,5 @@
         android:layout_height="4dp"
         android:background="#000"
         android:indeterminateOnly="false"
-        android:max="100"
-        />
-
+        android:max="100" />
 </FrameLayout>

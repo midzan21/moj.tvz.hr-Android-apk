@@ -8,15 +8,15 @@ import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.ProgressBar;
 
-/**
- * Created by Marko on 24.1.2015..
- */
 public class Odjava extends Fragment {
 
+    private ProgressBar progressBar;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.mojevijesti, container, false);
@@ -25,6 +25,8 @@ public class Odjava extends Fragment {
 
 
         webStranica = (WebView) rootView.findViewById(R.id.stranica);
+
+        progressBar = (ProgressBar) rootView.findViewById(R.id.progressbar);
 
         WebSettings javascriptUkljucen = webStranica.getSettings();
 
@@ -55,6 +57,19 @@ public class Odjava extends Fragment {
 
             }
 
+
+        });
+
+        webStranica.setWebChromeClient(new WebChromeClient() {
+            @Override
+            public void onProgressChanged(WebView view, int progress) {
+                if (progress < 100 && progressBar.getVisibility() == ProgressBar.GONE)
+                    progressBar.setVisibility(ProgressBar.VISIBLE);
+                progressBar.setProgress(progress);
+                if (progress == 100)
+                    progressBar.setVisibility(ProgressBar.GONE);
+
+            }
 
         });
 

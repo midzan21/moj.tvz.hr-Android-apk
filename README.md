@@ -9,6 +9,12 @@ https://www.androidfilehost.com/?fid=95916177934518542
 
 ## Changelog
 
+###v2.2
+
+* Postoji mali crni loadbar na vrhu prozora :)
+* O aplikaciji prozorček je dodan sa nekim informacijama o aplikaciji :D
+* Code optimizacije hehe
+
 ###v2.1
 
 * Back tipka radi ono što bi i trebala, vraća na prethodnu stranicu a ne izlazi odmah iz aplikacije :cheer:

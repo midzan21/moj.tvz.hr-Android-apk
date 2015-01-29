@@ -1,12 +1,21 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+    android:id="@+id/MojiPredmeti"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/MojiPredmeti">
+    android:orientation="vertical">
 
     <WebView
         android:id="@+id/stranica"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="4dp"
+        android:background="#000"
+        android:indeterminateOnly="false"
+        android:max="100" />
 </FrameLayout>
