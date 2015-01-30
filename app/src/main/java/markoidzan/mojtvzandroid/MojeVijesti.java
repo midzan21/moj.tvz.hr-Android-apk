@@ -1,6 +1,8 @@
 package markoidzan.mojtvzandroid;
 
 import android.app.Fragment;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -33,7 +35,7 @@ public class MojeVijesti extends Fragment {
 
         javascriptUkljucen.setJavaScriptEnabled(true);
 
-        webStranica.setWebViewClient(new WebViewClient() {
+        WebViewClient webViewClient = new WebViewClient() {
 
             @Override
             public void onPageFinished(WebView view, String url) {
@@ -59,8 +61,20 @@ public class MojeVijesti extends Fragment {
 
             }
 
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                if (Uri.parse(url).getHost().contains("moj.tvz.hr")) {
+                    return false;
+                }
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                view.getContext().startActivity(intent);
+                return true;
+            }
 
-        });
+
+        };
+        WebViewClient client = webViewClient;
+        webStranica.setWebViewClient(client);
 
         webStranica.setWebChromeClient(new WebChromeClient() {
             @Override

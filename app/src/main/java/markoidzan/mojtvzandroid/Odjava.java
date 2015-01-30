@@ -1,6 +1,8 @@
 package markoidzan.mojtvzandroid;
 
 import android.app.Fragment;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -55,6 +57,16 @@ public class Odjava extends Fragment {
                         "document.getElementsByTagName('body')[0].background='#fff';" +
                         "})()");
 
+            }
+
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                if (Uri.parse(url).getHost().contains("moj.tvz.hr")) {
+                    return false;
+                }
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                view.getContext().startActivity(intent);
+                return true;
             }
 
 
