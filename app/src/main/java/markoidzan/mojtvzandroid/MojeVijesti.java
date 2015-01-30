@@ -35,7 +35,7 @@ public class MojeVijesti extends Fragment {
 
         javascriptUkljucen.setJavaScriptEnabled(true);
 
-        WebViewClient webViewClient = new WebViewClient() {
+        webStranica.setWebViewClient(new WebViewClient() {
 
             @Override
             public void onPageFinished(WebView view, String url) {
@@ -72,9 +72,7 @@ public class MojeVijesti extends Fragment {
             }
 
 
-        };
-        WebViewClient client = webViewClient;
-        webStranica.setWebViewClient(client);
+        });
 
         webStranica.setWebChromeClient(new WebChromeClient() {
             @Override
