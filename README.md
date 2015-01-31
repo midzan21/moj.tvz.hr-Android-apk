@@ -5,9 +5,20 @@ Android aplikacija za Intranet portal Tehničkog veleučilišta u Zagrebu.
 
 # Download link
 
-https://www.androidfilehost.com/?fid=95916177934519823
+http://www.amazon.com/Marko-Id-x17E-an-Android/dp/B00SZJTMUM/ref=sr_1_1?s=mobile-apps&ie=UTF8&qid=1422699244&sr=1-1&keywords=moj+tvz+za+android&pebp=1422699244979&peasin=B00SZJTMUM
+
+#### Preuzmite aplikaciju putem Amazon App Storea
+
+#### Mirror na AFH dolazi uskoro
 
 ## Changelog
+
+###v3.0
+
+* Optimizacije koda
+* Izrađena ikona
+* Sitne prepravke u samom dizajnu sučelja (prilagodba boja)
+* Objava na Amazon App Store :proud:
 
 ###v2.4
 
