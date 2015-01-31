@@ -9,6 +9,13 @@ https://www.androidfilehost.com/?fid=95916177934519823
 
 ## Changelog
 
+###v2.4
+
+* Fix loading bar layouta (v2.3 beta)
+* Omanje optimizacije koda
+* Svi linkovi koji nisu na moj.tvz.hr (v2.3) kao i sva preuzimanja otvaraju vaš browser
+* Prije preuzimanja potreban je login i u browseru (scumbag TVZ)
+
 ###v2.2
 
 * Postoji mali crni loadbar na vrhu prozora :)
