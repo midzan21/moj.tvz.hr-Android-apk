@@ -5,7 +5,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_about">O aplikaciji</string>
     <string name="action_about_dialog">O aplikaciji</string>
-    <string name="text_about_dialog">Verzija 3.0\nAutor: Marko Idžan\nAplikacija je objavljena na Amazon App Store
+    <string name="text_about_dialog">Verzija 3.1\nAutor: Marko Idžan\nAplikacija je objavljena na Amazon App Store
     </string>
     <string name="text_action_close_about_dialog">Zatvori</string>
     <string name="drawer_open">otvori</string>

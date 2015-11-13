@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/MojTVZAndroid.iml" filepath="$PROJECT_DIR$/MojTVZAndroid.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/moj.tvz.hr-Android-apk-master.iml" filepath="$PROJECT_DIR$/moj.tvz.hr-Android-apk-master.iml" />
     </modules>
   </component>
 </project>
-

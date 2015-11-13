@@ -56,6 +56,9 @@ public class Odjava extends Fragment {
                 webStranica.loadUrl("javascript:(function(){" +
                         "document.getElementsByTagName('body')[0].background='#fff';" +
                         "})()");
+                webStranica.loadUrl("javascript:(function(){" +
+                        "document.getElementsByClassName('link_dno')[0].style.display='none';" +
+                        "})()");
 
             }
 
