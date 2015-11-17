@@ -5,13 +5,17 @@ Android aplikacija za Intranet portal Tehničkog veleučilišta u Zagrebu.
 
 # Download link
 
-http://www.amazon.com/Marko-Id-x17E-an-Android/dp/B00SZJTMUM/ref=sr_1_1?s=mobile-apps&ie=UTF8&qid=1422699244&sr=1-1&keywords=moj+tvz+za+android&pebp=1422699244979&peasin=B00SZJTMUM
+Amazon App Store - http://bit.ly/MojTVZAndroid
 
-#### Preuzmite aplikaciju putem Amazon App Storea
-
-#### Mirror na AFH dolazi uskoro
+Android File Host - http://bit.ly/MojTVZAndroidv4AFHMirror
 
 ## Changelog
+
+###v4.0
+
+* Dodana podrška za Android 6.0, te je poboljšana podrška za uređaje sa Androidom 5.1
+* Revizija za Amazon App Store
+* Sitna poboljšanja koda web sučelja
 
 ###v3.0
 
@@ -53,12 +57,11 @@ http://www.amazon.com/Marko-Id-x17E-an-Android/dp/B00SZJTMUM/ref=sr_1_1?s=mobile
     * Raspored sati (korisno)
     * Odjava (za iOS korisnike da vide što ih zanima ;) :trollface: )
 
-## Ideje za aplikaciju:
+## Što je novo u alpha verziji (neobjavljeno):
 
-* Material Design smejrnice i primjena istih (djelomična primjena sa 2.0 stable)
-* Poboljšavanje login prozora i pristupa kolegijima/predmetima (riješeno)
-* Poboljšavanje responsive dijela weba(djelomično riješeno)
-* Sitne prepravke sučelja Intranet weba (riješeno)
+* Izrada Navigation Drawera koristeći Google Design Support Library
+* Uklanjanje podrška za Android 4.0.x i 4.1.x
+* Izrada nove ikone
 
 ## Tehnologije korištene za izradu aplikacije
 
@@ -68,7 +71,7 @@ http://www.amazon.com/Marko-Id-x17E-an-Android/dp/B00SZJTMUM/ref=sr_1_1?s=mobile
 
 ## Minimalni zahtjevi (na dan 25. 01. 2015.)
 
-* Android 4.0 i noviji (podržan je i Android 5.0.2 Lollipop, testirano na emulatoru)
+* Android 4.0 i noviji
 * MDPI rezolucija ekrana (320 x 480 px)
 
 
