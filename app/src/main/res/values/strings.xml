@@ -6,7 +6,9 @@
     <string name="action_about">O aplikaciji</string>
     <string name="action_about_dialog">O aplikaciji</string>
 
+
     <string name="text_about_dialog">Verzija 4.0\nAutor: Marko Idžan\nAplikacija je objavljena na Amazon App Store
+
 
     </string>
     <string name="text_action_close_about_dialog">Zatvori</string>
